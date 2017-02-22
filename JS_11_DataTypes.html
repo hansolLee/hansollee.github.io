@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>W3School Javascript</h1>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p>
+<p id="demo15"></p>
+<p id="demo16"></p>
+<p id="demo17"></p>
+<p id="demo18"></p>
+<p id="demo19"></p>
+<p id="demo20"></p>
+<script type="text/javascript">
+    // 자바스크립트 데이터 형식
+    /*
+    var length = 16; // Number
+    var lastName = "Johnson"; // String
+    var x = {firstName = "John", lastName = "Don"}; // Object
+    */
+
+    // 데이터 유형의 개념
+    /*
+    프로그래밍, 데이터 타입은 중요한 개념이다.
+    변수를 조작 할 수 있으려면 그 종류에 대해 아는것이 중요하다.
+    데이터 유형이 없으면 컴퓨터가 안전하게 문제를 해결 할 수 없다.
+    */
+    // var x = 16 + "Volvo"; === var x = "16" + "Volvo";
+    var x = 16 + "Volvo";
+    document.getElementById("demo1").innerHTML = x;
+
+    // 왼쪽에서 오른쪽으로 읽는 순서 때문에 숫자열이 문자열이 되기전에 합쳐진 후 문자열과 만나 문자열로 변경
+    var y = 16 + 4 + "Volvo";
+    document.getElementById("demo2").innerHTML = y;
+
+    // 문자열을 먼저 만난 식이 뒤에 숫자를 먼저 문자열로 전부 인식하여 숫자가 덧셈이 되지 않고 문자열로 출력
+    var z = "Volvo" + 16 + 4;
+    document.getElementById("demo3").innerHTML = z;
+
+    // 자바스크립트 유형은 동적이다.
+    // 변수가 서로 다른 데이터 유형을 유지하는데 사용 될 수 있다.
+    var a; // x is undefined
+    var a = 5; // x is number
+    var a = "John Doe";// x is string
+
+    // 자바스크립트 문자열
+    // 문자열은 따옴표와 쌍따옴표로 사용 할 수 있습니다.
+    var carName = "Volvo XC60"; // 쌍따옴표
+    var carName = 'Volvo XC60'; // 따옴표
+
+    // 문자열을 둘러싼 인용 부호와 일치하지 않는 것은 문자열 안에 따옴표로 사용 할 수있다.
+    var carName1 = "Volvo XC60";
+    var carName2 = 'Volvo XC60';
+    var answer1 = "It's alright";
+    var answer2 = "He is called 'Johney'";
+    var answer3 = 'He is called "Johney"';
+
+    document.getElementById("demo4").innerHTML =
+        carName1 + "<br/>" +
+        carName2 + "<br/>" +
+        answer1 + "<br/>" +
+        answer2 + "<br/>" +
+        answer3;
+
+    // 자바스크립트 번호
+    var x1 = 34.00;
+    var x2 = 34;
+
+    // 지수 표기법
+    var b = 123e5; // 12300000
+    var c = 123e-5; // 0.00123
+    document.getElementById('demo5').innerHTML = b;
+    document.getElementById('demo6').innerHTML = c;
+
+    // 자바스크립트 부울
+    // 참 또는 거짓 : 부울은 두 개의 값을 가질 수 있습니다.
+    var x = true;
+    var y = false;
+
+    // 자바스크립트 배열
+    // 배열은 대괄호로 구분되며 배열 항목은 쉼표로 구분됩니다.
+    var cars = ['Saab', 'Volvo', 'BMW'];
+    document.getElementById('demo7').innerHTML = cars[0];
+    // 배열의 인덱스 첫 번째는 0을 기반으로 한다.
+
+    // 자바스크립트 객체
+    // 자바스크립트 객체는 중괄호로 기록됩니다.
+    // 쉼표로 구분 된 값 쌍 : 개체 속성 이름으로 기록됩니다.
+    var person = { firstName : "John", lastName : "Doe", age : 50, eyeColor : "Blue"};
+    // 이름, 성, 나이, 눈 색깔 위에는 4개의 속성이 있습니다.
+    document.getElementById('demo8').innerHTML = person.firstName + " is " + person.age + " year old";
+
+    // typeof 연산자
+    // typeof 로 변수의 유형을 찾으며 이에 대한 표현식의 타입을 반환
+    document.getElementById("demo9").innerHTML =
+        typeof "" + "<br/>" +
+        typeof "John" + "<br/>" +
+        typeof "John Doe" + "<br/>" + // 1 ~ 3 string
+        typeof "John" + "Doe"; // stringDoe
+
+    document.getElementById("demo10").innerHTML =
+        typeof 0 + "<br/>" +
+        typeof 314 + "<br/>" +
+        typeof 3.14 + "<br/>" +
+        typeof(3) + "<br/>" +
+        typeof(3 + 4); // all number
+
+    // 원시 데이터
+    // 기본 데이터 값은 추가 속성과 메소드, 하나의 간단한 데이터 값입니다.
+    // typeof 연산자는 이러한 기본 형식 중 하나를 반환 할 수 있습니다. string, number, boolean, null, undefined
+    document.getElementById("demo11").innerHTML =
+        typeof "John" + "<br/>" +
+        typeof 3.14 + "<br/>" +
+        typeof true + "<br/>" +
+        typeof false;
+
+    // 복잡한 데이터
+    // 복잡한 데이터에 대한 typeof 연산자는 복잡한 유형 중 하나를 반환 할 수 있습니다. function, object
+    document.getElementById("demo12").innerHTML =
+        typeof [1,2,3,4] + "<br/>" +
+        typeof {name : "John", age : 34} + "<br/>" +
+        typeof function myFunc(){};
+
+    // undefined = 정의 되지 않은
+    var man;
+    document.getElementById("demo13").innerHTML = man;
+    // 변수의 값을 비워서 정의 할 수도 있다.
+    var person = undefined;
+    document.getElementById("demo14").innerHTML = person + "<br/>" + typeof person;
+
+    // 빈 값
+    // 빈 값은 정의와는 아무 상관이 없다. 빈 문자열 변수는 값과 형식이 모두 있다.
+    var car = "";
+    document.getElementById("demo15").innerHTML =
+    "The Value is : " + car + "<br/>" + "The type is " + typeof car;
+
+    // null = 없는
+    // 자바스크립트에서 null 은 '아무것도 아닌' 것 존재하지 않는 무언가가 있어야 한다.
+    // null 을 설정하여 객체를 비울 수 있다.
+    var person = null;
+    document.getElementById("demo16").innerHTML = typeof person;
+    // undefined 를 설정하여 객체를 비울 수 있다.
+    var person = undefined;
+    document.getElementById("demo17").innerHTML = typeof person;
+
+    // undefined 와 null 의 차이
+    document.getElementById("demo18").innerHTML =
+    typeof undefined + "<br/>" +
+    typeof null + "<br/>" +
+    (null === undefined) + "<br/>" +
+    (null == undefined);
+</script>
+</body>
+</html>
